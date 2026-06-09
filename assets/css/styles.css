@@ -426,6 +426,8 @@ h1, h2, h3, h4, p, li, .tag, .chip, .lead, .pj-facts b, td, th {
   :root { --header-h: 64px; }
   .container { padding: 0 16px; }
   .section { padding: 44px 0; }
+  /* Низ карточки проекта: статус и ссылка переносятся, если не влезают в строку */
+  .pj-foot { flex-wrap: wrap; gap: 8px 12px; }
   .card { padding: 20px; }
   .hero-card { padding: 20px; }
   .hero .container { padding-top: 44px; padding-bottom: 52px; }
