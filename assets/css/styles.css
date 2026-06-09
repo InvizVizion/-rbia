@@ -380,6 +380,18 @@ table.data tr:hover td { background: var(--paper-2); }
 html, body { overflow-x: hidden; max-width: 100%; }
 img, table, pre { max-width: 100%; }
 
+/* Первопричина «гуляния»: grid/flex-элементы по умолчанию не сжимаются
+   уже своего контента (min-width:auto) и распирают строку длинным текстом.
+   Разрешаем им сжиматься и переносим длинные слова. */
+.grid > *, .hero-grid > *, .contact-grid > *, .footer-grid > *,
+.region, .region > *, .project, .pj-facts > *, .card, .sector {
+  min-width: 0;
+}
+h1, h2, h3, h4, p, li, .tag, .chip, .lead, .pj-facts b, td, th {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 /* Меню на планшетах/телефонах: прокрутка, если не влезает по высоте */
 @media (max-width: 940px) {
   .nav-links { max-height: calc(100vh - var(--header-h)); overflow-y: auto; -webkit-overflow-scrolling: touch; }
@@ -441,10 +453,12 @@ img, table, pre { max-width: 100%; }
 }
 
 /* Очень узкие экраны (≈360px и меньше) */
-@media (max-width: 380px) {
+@media (max-width: 400px) {
   h1 { font-size: 1.7rem; }
   .brand small { display: none; }
   .hero-stats { grid-template-columns: 1fr 1fr; }
   .hero-stats .num { font-size: 1.4rem; }
   .chip { font-size: .74rem; }
+  /* Длинные надписи на кнопках переносятся, а не вылезают за экран */
+  .btn { white-space: normal; text-align: center; padding-left: 18px; padding-right: 18px; }
 }
