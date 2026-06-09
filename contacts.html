@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Контакты | RBIA — Российский бизнес в Африке</title>
+  <meta name="description" content="Свяжитесь с командой портала RBIA: оставьте заявку на консультацию, предложите проект или станьте партнёром. Фокус — Танзания и Западная Африка." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23143966'/><text x='50' y='68' font-size='54' text-anchor='middle' fill='%23f0bf57' font-family='Arial' font-weight='bold'>R</text></svg>" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="logo"><span>RB</span></span><span><b>RBIA</b><small>Russian Business in Africa</small></span></a>
+      <button class="nav-toggle" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="projects.html">Проекты</a>
+        <a href="sectors.html">Направления</a>
+        <a href="regulation.html">Нормативка</a>
+        <a href="about.html">О портале</a>
+        <a href="contacts.html">Контакты</a>
+        <a class="btn btn-primary nav-cta" href="contacts.html">Стать партнёром</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="crumbs"><a href="index.html">Главная</a> / Контакты</div>
+      <h1>Контакты</h1>
+      <p>Оставьте заявку на консультацию, предложите проект или предложите сотрудничество. Команда портала и партнёры свяжутся с вами и помогут с вводными по региону.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Форма -->
+        <div class="card reveal" style="padding:30px">
+          <h2 style="font-size:1.4rem">Оставить заявку</h2>
+          <p class="muted" style="margin-bottom:22px">Заполните форму — расскажите коротко о компании и задаче. Ответим в течение рабочего дня.</p>
+          <form data-contact-form novalidate>
+            <div class="field">
+              <label for="name">Имя и фамилия *</label>
+              <input id="name" name="name" type="text" required placeholder="Иван Иванов" />
+            </div>
+            <div class="field">
+              <label for="company">Компания</label>
+              <input id="company" name="company" type="text" placeholder="ООО «Пример»" />
+            </div>
+            <div class="grid cols-2" style="gap:16px">
+              <div class="field">
+                <label for="email">E-mail *</label>
+                <input id="email" name="email" type="email" required placeholder="you@company.ru" />
+              </div>
+              <div class="field">
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel" placeholder="+7 ___ ___-__-__" />
+              </div>
+            </div>
+            <div class="grid cols-2" style="gap:16px">
+              <div class="field">
+                <label for="topic">Тема обращения</label>
+                <select id="topic" name="topic">
+                  <option>Консультация по рынку</option>
+                  <option>Предложить проект</option>
+                  <option>Нормативка по стране</option>
+                  <option>Партнёрство с порталом</option>
+                  <option>Другое</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="region">Интересующий рынок</label>
+                <select id="region" name="region">
+                  <option>Танзания</option>
+                  <option>Нигерия</option>
+                  <option>Гана</option>
+                  <option>Сенегал</option>
+                  <option>Кот-д'Ивуар</option>
+                  <option>Западная Африка (в целом)</option>
+                  <option>Ещё не определились</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="message">Сообщение</label>
+              <textarea id="message" name="message" placeholder="Коротко о продукте/проекте и о том, чем мы можем помочь"></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Отправить заявку</button>
+            <p class="form-note" style="margin-top:12px">Нажимая «Отправить», вы соглашаетесь на обработку данных для ответа на обращение.</p>
+            <div class="form-ok hidden">✓ Спасибо! Заявка отправлена. Мы свяжемся с вами в ближайшее время.</div>
+          </form>
+          <p class="form-note" style="margin-top:6px">Форма демонстрационная: для приёма заявок подключите почтовый сервис или CRM.</p>
+        </div>
+
+        <!-- Контактные данные -->
+        <div class="reveal">
+          <h2 style="font-size:1.4rem">Прямые контакты</h2>
+          <p class="muted" style="margin-bottom:14px">Выберите удобный канал связи.</p>
+          <div class="card" style="padding:14px 24px">
+            <div class="contact-line"><div class="ci">✉️</div><div><b>E-mail</b><a href="mailto:info@rbia.example">info@rbia.example</a></div></div>
+            <div class="contact-line"><div class="ci">📞</div><div><b>Телефон</b><a href="tel:+70000000000">+7 (000) 000-00-00</a></div></div>
+            <div class="contact-line"><div class="ci">💬</div><div><b>Мессенджеры</b><span class="muted">Telegram / WhatsApp по запросу</span></div></div>
+            <div class="contact-line"><div class="ci">📍</div><div><b>Офис</b><span class="muted">Москва, Россия · приём по предварительной записи</span></div></div>
+          </div>
+
+          <h3 style="margin-top:30px">Партнёрская поддержка</h3>
+          <div class="card" style="padding:14px 24px">
+            <div class="contact-line"><div class="ci">🏛️</div><div><b>АНО «ДМТК»</b><span class="muted">Экспертиза и деловые миссии по региону</span></div></div>
+            <div class="contact-line"><div class="ci">🌍</div><div><b>Российско-Африканский деловой совет</b><span class="muted">Выход на партнёров и сопровождение сделок</span></div></div>
+          </div>
+
+          <div class="note" style="margin-top:24px">
+            <b>Совет.</b> Чтобы консультация была предметной, заранее подготовьте описание продукта, целевые страны и ориентир по объёму поставок или инвестиций.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><a class="brand" href="index.html" style="margin-bottom:16px"><span class="logo"><span>RB</span></span><span><b>RBIA</b><small>Russian Business in Africa</small></span></a><p style="color:#9fb0c7;max-width:34ch">Информационный портал для российского бизнеса в Африке. Фокус — Танзания и Западная Африка.</p></div>
+        <div><h5>Разделы</h5><a href="projects.html">Проекты</a><a href="sectors.html">Направления</a><a href="regulation.html">Нормативка</a><a href="contacts.html">Контакты</a></div>
+        <div><h5>Партнёры</h5><a href="about.html">АНО «ДМТК»</a><a href="about.html">Российско-Африканский деловой совет</a><a href="about.html">О портале</a></div>
+        <div><h5>Связь</h5><a href="mailto:info@rbia.example">info@rbia.example</a><a href="contacts.html">Форма обратной связи</a><a href="contacts.html">Стать партнёром</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span data-year>2026</span> RBIA. Все права защищены.</span><span>Информация носит справочный характер и не является публичной офертой.</span></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
