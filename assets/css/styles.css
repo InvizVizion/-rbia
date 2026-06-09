@@ -370,3 +370,81 @@ table.data tr:hover td { background: var(--paper-2); }
   border-radius: var(--radius-sm); padding: 16px 18px; color: #6b5410; font-size: .92rem;
 }
 .note b { color: #54420c; }
+
+/* =========================================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ — доводка
+   (правила идут последними и перекрывают базовые)
+   ========================================================= */
+
+/* Защита от горизонтальной прокрутки на узких экранах */
+html, body { overflow-x: hidden; max-width: 100%; }
+img, table, pre { max-width: 100%; }
+
+/* Меню на планшетах/телефонах: прокрутка, если не влезает по высоте */
+@media (max-width: 940px) {
+  .nav-links { max-height: calc(100vh - var(--header-h)); overflow-y: auto; -webkit-overflow-scrolling: touch; }
+}
+
+/* Планшет */
+@media (max-width: 760px) {
+  .section { padding: 52px 0; }
+  .section--tight { padding: 40px 0; }
+  .hero .container { padding-top: 56px; padding-bottom: 60px; }
+  .page-hero .container { padding: 44px 20px 42px; }
+  .hero p { font-size: 1.05rem; }
+  .lead { font-size: 1.05rem; }
+  .section-head { margin-bottom: 30px; }
+
+  /* CTA компактнее и без переполнения */
+  .cta { padding: 32px 22px; border-radius: 18px; }
+  .cta-actions .btn { flex: 1 1 auto; justify-content: center; }
+
+  /* Аккордеон: убираем большой левый отступ текста */
+  .acc-head { padding: 16px 16px; gap: 11px; }
+  .acc-head .num { min-width: 22px; font-size: 1rem; }
+  .acc-head h3 { font-size: 1rem; }
+  .acc-body-inner { padding: 0 16px 18px 16px; }
+
+  /* Подвал: строки в столбик, аккуратно */
+  .footer-bottom { flex-direction: column; gap: 6px; }
+}
+
+/* Телефон */
+@media (max-width: 560px) {
+  :root { --header-h: 64px; }
+  .container { padding: 0 16px; }
+  .section { padding: 44px 0; }
+  .card { padding: 20px; }
+  .hero-card { padding: 20px; }
+  .hero .container { padding-top: 44px; padding-bottom: 52px; }
+
+  /* Кнопки в герое и CTA — на всю ширину, удобно нажимать пальцем */
+  .hero-actions, .cta-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn, .cta-actions .btn { width: 100%; justify-content: center; }
+
+  /* Цифры в карточке героя крупные, но без переноса */
+  .hero-stats { gap: 16px 12px; }
+  .hero-stats .num { font-size: 1.55rem; }
+  .stat .num { font-size: 1.7rem; }
+
+  /* Факты проекта — в один столбец, чтобы значения не сжимались */
+  .pj-facts { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .project .pj-top, .project .pj-body { padding: 18px 18px; }
+
+  /* Контактные строки и иконки компактнее */
+  .contact-line .ci { width: 40px; height: 40px; font-size: 1.05rem; }
+  .region { grid-template-columns: 52px 1fr; gap: 14px; }
+  .region .flag { width: 52px; height: 36px; }
+
+  /* Подсказка: таблицы прокручиваются по горизонтали */
+  .table-wrap { position: relative; }
+}
+
+/* Очень узкие экраны (≈360px и меньше) */
+@media (max-width: 380px) {
+  h1 { font-size: 1.7rem; }
+  .brand small { display: none; }
+  .hero-stats { grid-template-columns: 1fr 1fr; }
+  .hero-stats .num { font-size: 1.4rem; }
+  .chip { font-size: .74rem; }
+}
